@@ -16,3 +16,4 @@ rootProject.name = "springboot"
 
 include("kvp-spring-boot-starter")
 include("kvp-spring-boot-web")
+include("kvp-spring-boot-web-undertow")
