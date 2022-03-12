@@ -1,3 +1,9 @@
 van:
   name: VanSunHo
   age: 29
+
+spring:
+  profiles:
+    group:
+      prod:
+        - prod-info
