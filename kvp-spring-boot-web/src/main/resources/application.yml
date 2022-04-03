@@ -1,3 +1,4 @@
+
 van:
   name: VanSunHo
   age: 29
@@ -7,3 +8,5 @@ spring:
     group:
       prod:
         - prod-info
+server:
+  port: 19998

@@ -13,20 +13,20 @@ import org.springframework.context.annotation.Bean
 
 @SpringBootApplication
 class UndertowApplication {
-    @Bean
-    fun serverFactory(): ServletWebServerFactory {
-        val factory = UndertowServletWebServerFactory()
-        factory.addBuilderCustomizers({ builder -> builder.addHttpListener(8080, "0.0.0.0") })
-
-        factory.addDeploymentInfoCustomizers(UndertowDeploymentInfoCustomizer { deploymentInfo ->
-            deploymentInfo.addSecurityConstraint(
-                SecurityConstraint().addWebResourceCollection(WebResourceCollection().addUrlPattern("/*"))
-                    .setTransportGuaranteeType(TransportGuaranteeType.CONFIDENTIAL)
-                    .setEmptyRoleSemantic(SecurityInfo.EmptyRoleSemantic.PERMIT)
-            ).setConfidentialPortManager { 8443 }
-        });
-        return factory
-    }
+//    @Bean
+//    fun serverFactory(): ServletWebServerFactory {
+//        val factory = UndertowServletWebServerFactory()
+//        factory.addBuilderCustomizers({ builder -> builder.addHttpListener(8080, "0.0.0.0") })
+//
+//        factory.addDeploymentInfoCustomizers(UndertowDeploymentInfoCustomizer { deploymentInfo ->
+//            deploymentInfo.addSecurityConstraint(
+//                SecurityConstraint().addWebResourceCollection(WebResourceCollection().addUrlPattern("/*"))
+//                    .setTransportGuaranteeType(TransportGuaranteeType.CONFIDENTIAL)
+//                    .setEmptyRoleSemantic(SecurityInfo.EmptyRoleSemantic.PERMIT)
+//            ).setConfidentialPortManager { 8443 }
+//        });
+//        return factory
+//    }
 }
 
 fun main(args: Array<String>) {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+this is index page
+<script src="webjars/jquery/3.6.0/dist/jquery.min.js"></script>
+<script>
+  $(() => {
+    $.ajax("http://localhost:19998/van")
+      .done(mesaage => {
+        alert(mesaage)
+      })
+      .fail(() => {
+          alert("fail")
+        }
+      )
+  })
+</script>
+</body>
+</html>

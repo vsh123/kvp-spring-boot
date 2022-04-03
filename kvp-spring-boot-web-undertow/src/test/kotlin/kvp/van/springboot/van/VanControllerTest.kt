@@ -9,7 +9,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 
 @WebMvcTest(VanController::class)
@@ -39,5 +43,13 @@ internal class VanControllerTest(
             .andExpect(MockMvcResultMatchers.status().isCreated)
             .andExpect(MockMvcResultMatchers.jsonPath("$.username", Matchers.`is`(Matchers.equalTo("van"))))
             .andExpect(MockMvcResultMatchers.jsonPath("$.password", Matchers.`is`(Matchers.equalTo("123"))))
+    }
+
+    @Test
+    fun hateoasTest() {
+        mockMvc.perform(get("/hateoas"))
+            .andDo(MockMvcResultHandlers.print())
+            .andExpect(status().isOk)
+            .andExpect(jsonPath("$._links.self").exists())
     }
 }
