@@ -8,5 +8,10 @@ spring:
     group:
       prod:
         - prod-info
+  datasource:
+    url: jdbc:mysql://localhost:23306/kvp_springboot
+    username: kvp-admin
+    password: kvp-admin
+
 server:
   port: 19998
