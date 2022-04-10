@@ -9,7 +9,7 @@ spring:
       prod:
         - prod-info
   datasource:
-    url: jdbc:mysql://localhost:23306/kvp_springboot
+    url: jdbc:postgresql://localhost:25432/kvp_springboot
     username: kvp-admin
     password: kvp-admin
 
