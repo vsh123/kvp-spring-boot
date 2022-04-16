@@ -6,6 +6,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
     implementation("org.postgresql:postgresql")
     implementation("org.flywaydb:flyway-core")
 //    implementation("mysql:mysql-connector-java")

@@ -16,5 +16,9 @@ spring:
     hibernate:
       ddl-auto: validate
     show-sql: true
+  flyway:
+    enabled: false
+  redis:
+    port: 26379
 server:
   port: 19998
