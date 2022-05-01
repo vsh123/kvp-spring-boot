@@ -41,3 +41,9 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+  kvp-neo4j:
+    container_name: kvp-neo4j
+    image: neo4j
+    ports:
+      - "27474:7474"
+      - "27687:7687"
