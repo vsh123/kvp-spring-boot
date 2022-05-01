@@ -26,3 +26,12 @@ docker-compose stop
 * 서비스용 계정 : `kvp-admin`
 * 서비스용 비밀번호 : `kvp-admin`
 * [docker localhost adminer](http://localhost:28080) 로 접속하면 [adminer](https://www.adminer.org) Web DB Client 로 DB조회 조작 가능.
+
+
+```
+
+mongodb 접속법(bash)
+
+docker exec -i -t kvp-mongodb bash
+
+```

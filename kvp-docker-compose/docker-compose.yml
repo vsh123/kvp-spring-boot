@@ -36,3 +36,8 @@ services:
       - "26379:6379"
     environment:
       - REDIS_REPLICATION_MODE=master
+  kvp-mongodb:
+    container_name: kvp-mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
